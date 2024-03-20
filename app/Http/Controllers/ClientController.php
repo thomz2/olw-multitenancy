@@ -31,7 +31,7 @@ class ClientController extends Controller
         return view('clients.create');
     }
 
-    /**
+    /**  
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreClientRequest  $request
