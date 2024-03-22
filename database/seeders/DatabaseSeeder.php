@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             AddressSeeder::class,
             CompanySeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            SaleSeeder::class
         ]);
 
         // Truncate a tabela
