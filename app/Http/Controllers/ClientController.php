@@ -41,12 +41,14 @@ class ClientController extends Controller
     {
         DB::transaction(function() use($request) {
             $user = User::create([
+                'role_id' =>  \App\Enums\RoleEnum::CLIENT,
                 'email' => $request->get('email'),
                 'name' => $request->get('name'),
                 'password' => Hash::make('123456')
             ]);
 
             $user->client()->create([
+                'company_id' => session()->get('company_id'),
                 'address_id' => $request->get('address_id'),
             ]);
         });
