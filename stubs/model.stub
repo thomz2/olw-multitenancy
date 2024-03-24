@@ -4,8 +4,9 @@ namespace {{ namespace }};
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\BelongsToCompany;
 
 class {{ class }} extends Model
 {
-    use HasFactory;
+    use HasFactory, BelongsToCompany;
 }
